@@ -1,0 +1,69 @@
+{
+  "name": "wallet-app",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "tauri-dev": "tauri dev",
+    "tauri-build": "tauri build",
+    "lint": "tsc --build --clean && eslint --ext .ts,.tsx ./ --quiet --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "post-update": "echo \"--- UPDATE DEPENDENCIES ---\" && pnpm upgrade --latest",
+    "pre-commit": "pnpm run lint && pnpm run build",
+    "webpack-analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.1",
+    "@mui/material": "^5.15.0",
+    "@mui/system": "^5.15.0",
+    "@tauri-apps/api": "^1.5.2",
+    "ethers": "^6.9.1",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
+    "@next/eslint-plugin-next": "^14.0.4",
+    "@tauri-apps/cli": "^1.5.8",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "clsx": "^2.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

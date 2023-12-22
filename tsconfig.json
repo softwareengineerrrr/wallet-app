@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@ui/*": ["components/*"],
+      "public/*": ["public/*"],
+      "@media/*": ["public/static/*"],
+      "@icons/*": ["public/static/icons/*"],
+      "@images/*": ["public/static/images/*"],
+      "@typings/*": ["src/typings/*"],
+      "@theme": ["src/config/theme"],
+      "@hooks": ["src/hooks/index"]
+    }
+  },
+  "include": ["next-env.d.ts","src/utils/MUI/breakpointOverrides.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "src-tauri"]
+}
